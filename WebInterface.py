@@ -2,16 +2,17 @@
 from bitcoinrpc.authproxy import AuthServiceProxy
 import time
 
-www_file = "/var/www/html/index.html"
 rpc_user = ""
 rpc_pass = ""
 node_location = ""
 node_name = ""
-node_ip = ""
 donation_xpy_addr = ""
 
 access = AuthServiceProxy("http://" + rpc_user + ":" + rpc_pass + "@127.0.0.1:8999")
 info = access.getinfo()
+
+www_file = "/var/www/html/index.html"
+node_ip = str(info['ip'])
 
 ff = open(www_file, 'w')
 
