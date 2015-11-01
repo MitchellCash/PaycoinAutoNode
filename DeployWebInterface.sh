@@ -31,8 +31,8 @@ cd ~
 echo "### Downloading the Web Interface"
 mkdir ~/WebInterface/
 cd ~/WebInterface/
-wget -O uptime.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/uptime/uptime.py
-wget -O WebInterface.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/uptime/WebInterface.py
+wget -O uptime.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/uptime.py
+wget -O WebInterface.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/WebInterface.py
 echo "### IN 30 SECONDS CONFIGURE WEBINTERFACE.PY WITH RPC_USER, RPC_PASS, NODE_LOCATION, NODE_NAME, NODE_IP, DONATION_XPY_ADDR AND EXIT (DON’T FORGET TO SAVE)"
 sleep 30
 nano WebInterface.py
