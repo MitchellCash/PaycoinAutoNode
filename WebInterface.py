@@ -83,6 +83,7 @@ ff.write("<h1>Paycoin Node: " + node_ip + ":8998<br \></h1>")
 
 ff.write("<h3>")
 ff.write("Last Updated: " + time.strftime("%l:%M:%S %p (%z %Z) on %-d %b %Y") + "<br \>\n")
+ff.write("Node Uptime: " + uptime() + "<br />\n")
 ff.write("Node Version: " + str(info['version']) + "<br \>\n")
 ff.write("Protocol Version: " + str(info['protocolversion']) + "<br \>\n")
 ff.write("Connections: " + str(info['connections']) + "<br \>\n")
