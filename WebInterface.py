@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from bitcoinrpc.authproxy import AuthServiceProxy
 import time
-import uptime from uptime
+from uptime import uptime
 
 rpc_user = ""
 rpc_pass = ""
