@@ -92,6 +92,11 @@ ff.write("Donate: <a href='https://ledger.paycoin.com/address/" + donation_xpy_a
 ff.write(donation_xpy_addr + "</a>")
 ff.write("</h3>")
 
+ff.write("<h1>")
+ff.write("Latest hash: block <a href=\"https://ledger.paycoin.com/block/" + str(access.getblockhash(access.getblockcount())) + "\">" + str(access.getblockcount()) + "</a>")
+ff.write("</h1>")
+
+
 ff.write("<img src='http://qrfree.kaywa.com/?l=1&amp;s=4&amp;d=" + donation_xpy_addr + "' alt='QRCode'>")
 ff.write("</div>")
 ff.write("</body></html>")
