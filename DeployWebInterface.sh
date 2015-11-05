@@ -5,16 +5,15 @@ echo "### Stopping Paycoin Server"
 ./paycoind stop
 echo "### Changing to home directory"
 cd ~
-echo "### Updating centOS"
-sudo yum update -y
-sudo yum upgrade -y
-sudo yum install python-pip -y
-yum install httpd -y
-sudo chkconfig --levels 235 httpd on
-echo "### Allow ports 80, 8999 and save iptables"
-sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-sudo iptables -A INPUT -p tcp -m tcp --dport 8999 -j ACCEPT
-sudo iptables-save
+echo "### Updating Ubuntu"
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install python-pip apache2 -y
+echo "### Allow ports 80, 8999 and enable The Uncomplicated Firewall"
+sudo ufw allow 80/tcp
+sudo ufw allow 8999/tcp
+sudo ufw --force enable
 echo "### Installing python-bitcoinrpc"
 sudo pip install python-bitcoinrpc
 echo "### Changing to paycoind directory"
