@@ -2,19 +2,20 @@
 echo "### Change to home directory"
 cd ~
 echo "### Installing sudo"
-apt-get install sudo -y
-echo "### Update Ubuntu"
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
-sudo apt-get install software-properties-common python-software-properties unzip ufw -y
-echo "### Allow ports 22, 8998 and enable The Uncomplicated Firewall"
-sudo ufw allow 22/tcp
-sudo ufw allow 8998/tcp
-sudo ufw --force enable
+yum install sudo -y
+echo "### Updating centOS"
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install unzip -y
+yum install cronie -y
+echo "### Allow ports 22, 8998 and save iptables"
+sudo iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp -m tcp --dport 8998 -j ACCEPT
+sudo iptables-save
 echo "### Creating Swap File"
-dd if=/dev/zero of=/swapfile bs=1M count=1024 ; mkswap /swapfile ; swapon /swapfile
+dd if=/dev/zero of=/swapfile bs=1M count=1024
 echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+#sudo ./create_swap.sh 4096
 echo "### Creating paycoin.conf"
 mkdir ~/.paycoin/
 config=".paycoin/paycoin.conf"
