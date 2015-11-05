@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 echo "### Changing to paycoind directory"
 cd ~
 echo "### Stopping Paycoin Server"
