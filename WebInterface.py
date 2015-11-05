@@ -1,7 +1,12 @@
 #!/usr/bin/python
 from bitcoinrpc.authproxy import AuthServiceProxy
 import time
-from uptime import uptime
+import sys
+from server_uptime import server_uptime
+from cpu import cputotal
+from osversion import distro
+from osversion import version
+from osversion import name
 
 rpc_user = ""
 rpc_pass = ""
@@ -61,7 +66,16 @@ ff.write("font-family: 'Source Sans Pro','Open Sans','Helvetica Neue','Helvetica
 ff.write("}")
 
 ff.write("h3{")
-ff.write("font-size: 21px;")
+ff.write("font-size: 24px;")
+ff.write("font-weight: 200;")
+ff.write("letter-spacing: -0.01em;")
+ff.write("line-height: 1.14286;")
+ff.write("margin-bottom: 18px;")
+ff.write("}")
+
+ff.write("h2{")
+ff.write("color: #08c;")
+ff.write("font-size: 28px;")
 ff.write("font-weight: 200;")
 ff.write("letter-spacing: -0.01em;")
 ff.write("line-height: 1.14286;")
@@ -81,14 +95,20 @@ ff.write("</style>")
 ff.write("<div id='wrap'>")
 ff.write("<h1>Paycoin Node: " + node_ip + ":8998<br \></h1>")
 
+ff.write("<h2>Server Statistics" + "<br \></h2>")
+ff.write("<h3>")
+ff.write("Operating System: " + distro + " " + version + " " + name + "<br />\n")
+ff.write("System Uptime: " + server_uptime() + "<br />\n")
+ff.write("Current CPU Usage: " + cputotal() + "%" + "<br />\n")
+
+ff.write("<h2>Paycoin Node Statistics" + "<br \></h2>")
+
 ff.write("<h3>")
 ff.write("Last Updated: " + time.strftime("%l:%M:%S %p (%z %Z) on %-d %b %Y") + "<br \>\n")
-
 ff.write("Node Version: " + str(info['version']) + "<br \>\n")
 ff.write("Protocol Version: " + str(info['protocolversion']) + "<br \>\n")
 ff.write("Connections: " + str(info['connections']) + "<br \>\n")
 ff.write("Blocks: " + str(info['blocks']) + "<br \>\n")
-ff.write("Server Uptime: " + uptime() + "<br />\n")
 ff.write("Location: " + node_location + "<br />")
 ff.write("Node created by " + node_name + "<br />")
 ff.write("Donate: <a href='https://ledger.paycoin.com/address/" + donation_xpy_addr + "'>")
