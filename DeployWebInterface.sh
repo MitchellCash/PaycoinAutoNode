@@ -39,8 +39,8 @@ echo "### Installing the Web Interface"
 sudo python WebInterface.py
 echo "### Changing to home directory"
 cd ~
-echo "### Scheduling Cron Job to run WebInterface.py every 5 minutes"
-(crontab -l ; echo "*/5 * * * * sudo python ~/WebInterface/WebInterface.py")| crontab -
+echo "### Scheduling Cron Job to run WebInterface.py every 1 minute"
+(crontab -l ; echo "*/1 * * * * sudo python ~/WebInterface/WebInterface.py")| crontab -
 
 echo "### We recommend a system reboot to finish installation"
 read -p "### Would you like to reboot your system? " -n 1 -r
@@ -54,4 +54,3 @@ then
 else
     echo "### Please reboot your system for these changes to take effect"
 fi
-
