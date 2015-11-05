@@ -17,6 +17,10 @@ chmod 755 DeployWebInterface.sh
 
 ./DeployPaycoinNode.sh
 
+*****System will Reboot*****
+
+cd /opt
+
 ./DeployWebInterface.sh
 
 *****Follow On Screen Instrcutions*****
