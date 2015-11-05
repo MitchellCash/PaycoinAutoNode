@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "### Change to home directory"
 cd ~
+echo "### Installing sudo"
+apt-get install sudo -y
 echo "### Update Ubuntu"
 sudo apt-get update -y
 sudo apt-get upgrade -y
