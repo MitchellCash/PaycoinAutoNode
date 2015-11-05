@@ -31,10 +31,10 @@ cd ~
 echo "### Downloading the Web Interface"
 mkdir ~/WebInterface/
 cd ~/WebInterface/
-wget -O osversion.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/1-step-install/osversion.py
-wget -O cpu.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/1-step-install/cpu.py
-wget -O server_uptime.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/1-step-install/server_uptime.py
-wget -O WebInterface.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/1-step-install/WebInterface.py
+wget -O osversion.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/osversion.py
+wget -O cpu.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/cpu.py
+wget -O server_uptime.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/server_uptime.py
+wget -O WebInterface.py https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/WebInterface.py
 echo "### IN 15 SECONDS CONFIGURE WEBINTERFACE.PY WITH RPC_USER, RPC_PASS, NODE_LOCATION, NODE_NAME, NODE_IP, DONATION_XPY_ADDR AND EXIT (DON’T FORGET TO SAVE)"
 sleep 15
 nano WebInterface.py
