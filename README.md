@@ -7,13 +7,16 @@ cd /opt
 
 apt-get install git -y
 
-https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/DeployPaycoinNode.sh
+wget https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/DeployPaycoinNode.sh
+
 wget https://raw.githubusercontent.com/sk00t3r/PaycoinAutoNode/master/DeployWebInterface.sh
 
 chmod 755 DeployPaycoinNode.sh
+
 chmod 755 DeployWebInterface.sh
 
 ./DeployPaycoinNode.sh
+
 ./DeployWebInterface.sh
 
 *****Follow On Screen Instrcutions*****
