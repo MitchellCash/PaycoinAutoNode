@@ -85,7 +85,7 @@ ff.write("Last Updated: " + time.strftime("%l:%M:%S %p (%z %Z) on %-d %b %Y") + 
 ff.write("Node Version: " + str(info['version']) + "<br \>\n")
 ff.write("Protocol Version: " + str(info['protocolversion']) + "<br \>\n")
 ff.write("Connections: " + str(info['connections']) + "<br \>\n")
-ff.write("Blocks: " + str(info['blocks']) + "<br \>\n")
+ff.write("Blocks: <a href='https://ledger.paycoin.com/block/" + str(access.getblockhash(info['blocks'])) + "'>" + str(info['blocks']) + "</a><br \>\n")
 ff.write("Location: " + node_location + "<br />")
 ff.write("Node created by " + node_name + "<br />")
 ff.write("Donate: <a href='https://ledger.paycoin.com/address/" + donation_xpy_addr + "'>")
