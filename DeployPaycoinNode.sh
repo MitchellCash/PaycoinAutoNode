@@ -27,9 +27,9 @@ randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 echo "rpcuser=$randUser" >> $config
 echo "rpcpassword=$randPass" >> $config
-echo "### Downloading Paycoin Core 0.3.2.0"
-wget https://github.com/PaycoinFoundation/paycoin/releases/download/v0.3.2.0/linux64.zip
-echo "### Installing Paycoin Core 0.3.2.0"
+echo "### Downloading Paycoin Core 0.3.3.0"
+wget https://github.com/PaycoinFoundation/paycoin/releases/download/v0.3.3.0/linux64.zip
+echo "### Installing Paycoin Core 0.3.3.0"
 unzip linux64.zip
 rm -f -r linux64.zip
 rm -f -r paycoin-qt
