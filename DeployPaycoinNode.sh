@@ -37,5 +37,17 @@ rm -f -r linux64.zip
 rm -f -r paycoin-qt
 echo "### Scheduling Cron Job to run Paycoin Core on boot"
 (crontab -l ; echo "@reboot ~/./paycoind")| crontab -
-echo "### System will now reboot"
-reboot
+
+echo "### We recommend a system reboot to finish installation"
+read -p "### Would you like to reboot your system? " -n 1 -r
+echo    # Create new Line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # Reboot The System
+    echo "### System will reboot in 5 seconds"
+    sleep 5
+    reboot
+else
+    echo "### Please reboot your system for these changes to take effect"
+fi
+
