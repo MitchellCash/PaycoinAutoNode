@@ -1,4 +1,6 @@
 #!/bin/bash
+githubapi=$(curl -s https://api.github.com/rate_limit)
+
 version=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'tag_' | cut -d\" -f4)
 latest=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux64.zip')
 echo "### Changing to paycoind directory"
@@ -8,8 +10,6 @@ echo "### Stopping Paycoin Server"
 echo "### Changing to home directory"
 cd ~
 echo "### Downloading Paycoin Core ${version}"
-echo $latest
-#curl -O $latest
 curl -# -C - -L -k -o linux64.zip $latest
 echo "### Installing Paycoin Core ${version}"
 rm -f -r paycoind
