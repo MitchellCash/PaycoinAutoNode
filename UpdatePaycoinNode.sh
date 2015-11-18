@@ -3,13 +3,12 @@ version=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/release
 latest=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux64.zip')
 echo "### Changing to paycoind directory"
 cd ~
-
-xpy_version=$(./paycoind getinfo 2> /dev/null | grep '"version"' | cut -d\" -f4 | sed 's/\v//g' >/dev/null)
+xpy_version=$(./paycoind getinfo | grep '"version"' | cut -d\" -f4 | sed 's/\v//g' )
 # Check we are running the same version; otherwise; update
 
 if [[ "${xpy_version}" == "" ]]
 then
-    echo "### Paycoin Server Not Running, Unable to Check Version"
+    echo "### Paycoin server not running, Unable to check version"
     echo "### The latest is available version is v${version}"
 else 
     if [[ "${version}" == "${xpy_version}" ]]
@@ -20,7 +19,7 @@ else
     else
         echo "### You are running Paycoin Core v#{xpy_version}"
         echo "### The latest is available version is v${version}"
-        echo "### Stopping Paycoin Server"
+        echo "### Stopping Paycoin server"
         ./paycoind stop
     fi
 fi
