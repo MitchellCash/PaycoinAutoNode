@@ -18,7 +18,7 @@ else
         exit 1
     else
         echo "### You are running Paycoin Core v#{xpy_version}"
-        echo "### The latest is available version is v${version}"
+        echo "### The latest available version is v${version}"
         echo "### Stopping Paycoin server"
         ./paycoind stop
     fi
