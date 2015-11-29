@@ -13,6 +13,7 @@ while getopts ":frhv" opt; do
       REBOOT=1
       ;;
     h)
+      echo "-h                     Show this message"
       echo "-f                     Stop and force update Paycoin"
       echo "-r                     Reboot without prompting for interaction"
       echo "-v                     Show latest available version"
