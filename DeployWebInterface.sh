@@ -15,7 +15,7 @@ sudo ufw allow 80/tcp
 sudo ufw allow 8999/tcp
 sudo ufw --force enable
 echo "### Installing python-bitcoinrpc"
-sudo pip install python-bitcoinrpc
+sudo pip install python-bitcoinrpc==0.1
 echo "### Changing to paycoind directory"
 cd ~
 echo "### Starting Paycoin Server"
@@ -54,4 +54,3 @@ then
 else
     echo "### Please reboot your system for these changes to take effect"
 fi
-
