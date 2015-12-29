@@ -10,6 +10,8 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install python-pip apache2 -y
+echo "### Updating pip"
+sudo pip install --upgrade pip
 echo "### Allow ports 80, 8999 and enable The Uncomplicated Firewall"
 sudo ufw allow 80/tcp
 sudo ufw allow 8999/tcp
