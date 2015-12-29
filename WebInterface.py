@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from bitcoinrpc.authproxy import AuthServiceProxy
+from paycoinrpc.authproxy import AuthServiceProxy
 import time
 
 rpc_user = ""

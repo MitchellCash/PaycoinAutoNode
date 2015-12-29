@@ -14,8 +14,8 @@ echo "### Allow ports 80, 8999 and enable The Uncomplicated Firewall"
 sudo ufw allow 80/tcp
 sudo ufw allow 8999/tcp
 sudo ufw --force enable
-echo "### Installing python-bitcoinrpc"
-sudo pip install python-bitcoinrpc==0.1
+echo "### Installing python-paycoinrpc"
+sudo pip install python-paycoinrpc
 echo "### Changing to paycoind directory"
 cd ~
 echo "### Starting Paycoin Server"
