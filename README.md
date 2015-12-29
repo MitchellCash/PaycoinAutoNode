@@ -1,15 +1,13 @@
-Paycoin Auto Node
-=================
+<img src="https://raw.githubusercontent.com/mitchellcash/PaycoinAutoNode/master/images/logo.png" alt="Paycoin Auto Node logo" height="70" >
+# Paycoin Auto Node
 
-What is Paycoin Auto Node?
---------------------------
+**Welcome to Paycoin Auto Node!**
 
-Paycoin Auto Node are a handful of scripts to run, ideally just after setting up
+Paycoin Auto Node is a handful of scripts to run, ideally just after setting up
 a new server or VPS, to automatically setup paycoind and have it start on boot
 together with an optional Apache web interface.
 
-Installation
-------------
+## Installation
 
 The `DeployPaycoinNode.sh` and `DeployWebInterface.sh` scripts will install all required libraries and packages needed for the usage of Paycoin Auto Node. Please only run the scripts you intend on using.
 
@@ -37,8 +35,7 @@ Download the script to deploy the web interface:
 wget https://raw.githubusercontent.com/mitchellcash/PaycoinAutoNode/master/DeployWebInterface.sh
 ```
 
-Usage
------
+## Usage
 
 Deploy the scripts.
 
@@ -67,7 +64,6 @@ Run the script to deploy the web interface:
 bash ./DeployWebInterface.sh
 ```
 
-Example
--------
+## Example
 
 If you'd like to see an example of how the web interface looks in production see the [example web interface](http://paycoin.paynodes.io/).
