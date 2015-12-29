@@ -39,7 +39,7 @@ ff.write("color: #333;")
 ff.write("-moz-osx-font-smoothing: grayscale;")
 ff.write("font-feature-settings: 'liga', 'kern';")
 ff.write("text-rendering: optimizelegibility;")
-ff.write("background: url(https://dl.dropboxusercontent.com/u/37902134/PaycoinNodeBackgroundv2.png) no-repeat; background-size: 100%")
+ff.write("background: url(https://raw.githubusercontent.com/mitchellcash/PaycoinAutoNode/master/images/background.png) no-repeat; background-size: 100%")
 ff.write("}")
 
 ff.write("a{")
