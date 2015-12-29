@@ -1,6 +1,12 @@
 #!/usr/bin/python
 from paycoinrpc.authproxy import AuthServiceProxy
 import time
+import sys
+from server_uptime import server_uptime
+from cpu import cputotal
+from osversion import distro
+from osversion import version
+from osversion import name
 
 rpc_user = ""
 rpc_pass = ""
@@ -67,6 +73,15 @@ ff.write("line-height: 1.14286;")
 ff.write("margin-bottom: 18px;")
 ff.write("}")
 
+ff.write("h2{")
+ff.write("color: #08c;")
+ff.write("font-size: 31.5px;")
+ff.write("font-weight: 200;")
+ff.write("letter-spacing: -0.01em;")
+ff.write("line-height: 1.14286;")
+ff.write("margin-bottom: 18px;")
+ff.write("}")
+
 ff.write("h1{")
 ff.write("color: #08c;")
 ff.write("font-size: 42px;")
@@ -80,6 +95,14 @@ ff.write("</style>")
 ff.write("<div id='wrap'>")
 ff.write("<h1>Paycoin Node: " + node_ip + ":8998<br \></h1>")
 
+ff.write("<h2>Server Statistics" + "<br \></h2>")
+ff.write("<h3>")
+ff.write("Operating System: " + distro + " " + version + " " + name + "<br />\n")
+ff.write("System Uptime: " + server_uptime() + "<br />\n")
+ff.write("Current CPU Usage: " + cputotal() + "%" + "<br />\n")
+ff.write("</h3>")
+
+ff.write("<h2>Paycoin Node Statistics" + "<br \></h2>")
 ff.write("<h3>")
 ff.write("Last Updated: " + time.strftime("%l:%M:%S %p (%z %Z) on %-d %b %Y") + "<br \>\n")
 ff.write("Node Version: " + str(info['version']) + "<br \>\n")
