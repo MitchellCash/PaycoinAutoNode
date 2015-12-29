@@ -24,8 +24,8 @@ echo "### Starting Paycoin Server"
 ./paycoind
 echo "### Changing to home directory"
 cd ~
-echo "### IN 30 SECONDS PLEASE WRITE DOWN YOUR RPCUSER AND RPCPASSWORD AND PRESS CTRL+X (WE WILL NEED THESE SOON)"
-sleep 30
+echo "### IN 15 SECONDS PLEASE WRITE DOWN YOUR RPCUSER AND RPCPASSWORD AND PRESS CTRL+X (WE WILL NEED THESE SOON)"
+sleep 15
 cd .paycoin
 nano paycoin.conf
 echo "### Changing to home directory"
@@ -34,8 +34,8 @@ echo "### Downloading the Web Interface"
 mkdir ~/WebInterface/
 cd ~/WebInterface/
 wget -O WebInterface.py https://raw.githubusercontent.com/mitchellcash/PaycoinAutoNode/master/WebInterface.py
-echo "### IN 30 SECONDS CONFIGURE WEBINTERFACE.PY WITH RPC_USER, RPC_PASS, NODE_LOCATION, NODE_NAME, NODE_IP, DONATION_XPY_ADDR AND EXIT (DON’T FORGET TO SAVE)"
-sleep 30
+echo "### IN 15 SECONDS CONFIGURE WEBINTERFACE.PY WITH RPC_USER, RPC_PASS, NODE_LOCATION, NODE_NAME, NODE_IP, DONATION_XPY_ADDR AND EXIT (DON’T FORGET TO SAVE)"
+sleep 15
 nano WebInterface.py
 echo "### Installing the Web Interface"
 sudo python WebInterface.py
