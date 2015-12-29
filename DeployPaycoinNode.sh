@@ -9,7 +9,7 @@ echo "### Update Ubuntu"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install software-properties-common python-software-properties unzip ufw curl wget sed grep -y
+sudo apt-get install software-properties-common python-software-properties unzip ufw curl wget sed grep cron -y
 echo "### Allow ports 22, 8998 and enable The Uncomplicated Firewall"
 sudo ufw allow 22/tcp
 sudo ufw allow 8998/tcp
@@ -50,4 +50,3 @@ then
 else
     echo "### Please reboot your system for these changes to take effect"
 fi
-
