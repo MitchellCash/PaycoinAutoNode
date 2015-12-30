@@ -10,6 +10,6 @@ script:
   - shellcheck DeployWebInterface.sh
   - shellcheck UpdatePaycoinNode.sh
   - pylint --reports=n --disable=C0111,C0103,W0612 cpu.py
-  - pylint --reports=n --disable=C0326,C0111,C0103 osversion.py
+  - pylint --reports=n --disable=C0111,C0103 osversion.py
   - pylint --reports=n --disable=W0311,C0326,C0301,C0111,W0702,C0103,W0301,W0611 server_uptime.py
   - pylint --reports=n --disable=C0301,W1401,C0111,F0401,C0103,W0611 WebInterface.py
