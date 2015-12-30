@@ -1,6 +1,8 @@
 <img src="https://raw.githubusercontent.com/mitchellcash/PaycoinAutoNode/master/images/logo.png" alt="Paycoin Auto Node logo" height="70" >
 # Paycoin Auto Node
 
+[![Build Status](https://travis-ci.org/mitchellcash/PaycoinAutoNode.svg?branch=master)](https://travis-ci.org/mitchellcash/PaycoinAutoNode)
+
 **Welcome to Paycoin Auto Node!**
 
 Paycoin Auto Node is a handful of scripts to run, ideally just after setting up
