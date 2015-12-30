@@ -34,7 +34,7 @@ rpcuser=$randUser
 rpcpassword=$randPass"
 } >> "$config"
 echo "### Downloading Paycoin Core ${version}"
-curl -# -C - -L -k -o linux64.zip $latest
+curl -# -C - -L -k -o linux64.zip "$latest"
 echo "### Installing Paycoin Core ${version}"
 unzip linux64.zip
 rm -f -r linux64.zip
