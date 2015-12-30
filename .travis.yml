@@ -1,0 +1,11 @@
+os: linux
+sudo: required
+dist: trusty
+language: sh
+before_script:
+  - sudo apt-get -y update
+  - sudo apt-get -y install shellcheck
+script:
+  - shellcheck DeployPaycoinNode.sh
+  - shellcheck DeployWebInterface.sh
+  - shellcheck UpdatePaycoinNode.sh

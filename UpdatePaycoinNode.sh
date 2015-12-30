@@ -50,7 +50,7 @@ else
     then
         echo "### Paycoin server not running, Unable to check version"
         echo "### The latest is available version is v${version}"
-    else 
+    else
         if [[ "${version}" == "${xpy_version}" ]]
         then
             echo "### You are already running the latest version: v${version}"
@@ -66,7 +66,7 @@ else
 fi
 
 echo "### Downloading Paycoin Core ${version}"
-curl -# -C - -L -k -o linux64.zip $latest
+curl -# -C - -L -k -o linux64.zip "$latest"
 echo "### Installing Paycoin Core ${version}"
 rm -f -r paycoind
 unzip linux64.zip
