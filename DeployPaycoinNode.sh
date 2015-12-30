@@ -1,7 +1,7 @@
 #!/bin/bash
 
-randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
-randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+randUser=$(< /dev/urandom tr -dc A-Za-z0-9 | head -c30)
+randPass=$(< /dev/urandom tr -dc A-Za-z0-9 | head -c30)
 version=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'tag_' | cut -d\" -f4)
 latest=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux64.zip')
 
