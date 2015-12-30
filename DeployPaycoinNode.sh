@@ -1,6 +1,10 @@
 #!/bin/bash
+
+randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 version=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'tag_' | cut -d\" -f4)
 latest=$(curl -s https://api.github.com/repos/PaycoinFoundation/Paycoin/releases/latest | grep 'browser_' | cut -d\" -f4 | grep 'linux64.zip')
+
 echo "### Change to home directory"
 cd ~
 echo "### Installing Sudo"
@@ -21,14 +25,14 @@ echo "### Creating paycoin.conf"
 mkdir ~/.paycoin/
 config=".paycoin/paycoin.conf"
 touch $config
-echo "server=1" > $config
-echo "daemon=1" >> $config
-echo "maxconnections=125" >> $config
-echo "disablewallet=1" >> $config
-randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
-randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
-echo "rpcuser=$randUser" >> $config
-echo "rpcpassword=$randPass" >> $config
+{
+  echo "server=1
+daemon=1
+maxconnections=125
+disablewallet=1
+rpcuser=$randUser
+rpcpassword=$randPass"
+} >> "$config"
 echo "### Downloading Paycoin Core ${version}"
 curl -# -C - -L -k -o linux64.zip $latest
 echo "### Installing Paycoin Core ${version}"
