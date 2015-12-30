@@ -22,8 +22,8 @@ def deltaTime(interval):
     return y
 
 def cputotal():
-        dt = deltaTime(INTERVAL)
-        timeStamp = time.strftime(TIMEFORMAT)
-        cpuPct = 100 - (dt[len(dt) - 1] * 100.00 / sum(dt))
-        total = str('%.0f' %cpuPct)
-        return total
+    dt = deltaTime(INTERVAL)
+    timeStamp = time.strftime(TIMEFORMAT)
+    cpuPct = 100 - (dt[len(dt) - 1] * 100.00 / sum(dt))
+    total = str('%.0f' %cpuPct)
+    return total
