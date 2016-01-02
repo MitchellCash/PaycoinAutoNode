@@ -111,7 +111,7 @@ ff.write("Connections: " + str(info['connections']) + "<br \>\n")
 ff.write("Blocks: <a href='https://ledger.paycoin.com/block/" + str(access.getblockhash(info['blocks'])) + "'>" + str(info['blocks']) + "</a><br \>\n")
 ff.write("Location: " + node_location + "<br />")
 ff.write("Node created by " + node_name + "<br />")
-ff.write("Donate: <a href='https://ledger.paycoin.com/address/" + donation_xpy_addr + "'>")
+ff.write("Donate: <a href='paycoin:" + donation_xpy_addr + "'>")
 ff.write(donation_xpy_addr + "</a>")
 ff.write("</h3>")
 
